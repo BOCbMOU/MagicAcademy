@@ -15,6 +15,17 @@ export default Navigation;
 
 // css
 
-const StyledNav = styled.nav``;
+const StyledNav = styled.nav`
+  width: 100%;
+`;
 
-const StyledLink = styled(Link)``;
+const StyledLink = styled(Link)`
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  :nth-child(n + 2) {
+    margin-left: 20px;
+  }
+`;

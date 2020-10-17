@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { defaults } from './consts';
+import { stylesSet } from './constants/StylesSet';
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -10,13 +10,14 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    color: ${defaults.text};
+    color: ${stylesSet.color.defaultText};
+    font-size: 14px;
 
     background-color: #0a0a0a;
   }
 
   a {
-    color: ${defaults.text};
+    color: ${stylesSet.color.defaultText};
     text-decoration: none;
   }
 `;
@@ -354,7 +355,7 @@ export const ResetStyles = createGlobalStyle`
   input,
   select,
   textarea {
-      color: ${defaults.dark2};
+      color: ${stylesSet.color.pageBackground};
   }
 
 

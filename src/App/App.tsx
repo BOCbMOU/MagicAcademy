@@ -1,20 +1,17 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import { GlobalStyles, ResetStyles } from '../globalStyles';
 import Main from '../pages/Main/Main';
+import Spells from '../pages/Spells/Spells';
 
-const App = () => {
-  return (
-    <div className="App">
-      <ResetStyles />
-      <GlobalStyles />
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Main} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Main} exact />
+        <Route path="/spells" component={Spells} />
+      </Switch>
+    </BrowserRouter>
+  </div>
+);
 
 export default App;

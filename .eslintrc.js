@@ -6,6 +6,7 @@ module.exports = {
     es2020: true,
   },
   extends: [
+    'react-app',
     'plugin:react/recommended',
     'airbnb',
     'prettier/@typescript-eslint',
@@ -41,6 +42,7 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx', '.jsx'] }],
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-tag-spacing': 'off',
+    'react/self-closing-comp': 'warn',
 
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/array-type': 'warn',
@@ -71,14 +73,18 @@ module.exports = {
         vars: 'all',
       },
     ],
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      {
-        functions: false,
-        classes: false,
-        variables: false,
-      },
-    ],
+    '@typescript-eslint/no-use-before-define': 'off',
+    // '@typescript-eslint/no-use-before-define': [
+    //   'error',
+    //   {
+    //     functions: false,
+    //     classes: false,
+    //     variables: false,
+    //     enums: false,
+    //     typedefs: false,
+    //     ignoreTypeReferences: false,
+    //   },
+    // ],
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-for-of': 'warn',
     '@typescript-eslint/prefer-function-type': 'warn',
